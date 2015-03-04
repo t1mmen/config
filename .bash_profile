@@ -50,9 +50,10 @@ alias up='svn up'
 alias sst='svn st'
 
 ## Switch repos
-DIR=~/work
+DIR=/Users/timmstokke/Dropbox/www
 alias h='cd ~/'
 alias w='cd ${DIR}'
+alias www='cd ${DIR}'
 alias bs='cd ${DIR}/bootstrap'
 
 ## Core GitHub apps
