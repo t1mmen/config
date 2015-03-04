@@ -4,16 +4,32 @@
 	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 
 	// Personal preferences
+	"auto_complete_commit_on_tab": true,
+	"bold_folder_labels": true,
+	"caret_style": "smooth",
+	"detect_slow_plugins": false,
+	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": false,
+	"fallback_encoding": "UTF-8",
 	"font_face": "Menlo",
-	"font_size": 14.0,
-	"rulers":	[
-		80
+	"font_options":
+	[
+		"subpixel_antialias"
 	],
-	"word_wrap": true,
-
-	// Damn good preferences :D
-	"tab_size": 2,
-	"translate_tabs_to_spaces": true,
+	"font_size": 14.0,
+	"highlight_line": true,
+	"indent_guide_options":
+	[
+		"draw_active"
+	],
+	"save_on_focus_lost": true,
+	"tab_size": 4,
+	"translate_tabs_to_spaces": false,
+	"translate_spaces_to_tabs": true,
 	"trim_automatic_white_space": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"use_simple_full_screen": true,
+	"wide_caret": true,
+	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?_",
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "node_modules/*"]
 }
