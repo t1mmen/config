@@ -1,0 +1,8 @@
+/*
+In menubar, go Sublime Text -> Preferences -> Key bindings (User)
+*/
+[
+    { "keys": ["super+k"], "command": "toggle_side_bar" },
+    { "keys": ["super+shift+r"], "command": "reveal_in_side_bar"},
+    { "keys": ["alt+shift+f"], "command": "reindent", "args": {"single_line": false} }
+]
