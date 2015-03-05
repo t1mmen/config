@@ -25,11 +25,11 @@
 	"save_on_focus_lost": true,
 	"tab_size": 4,
 	"translate_tabs_to_spaces": false,
-	"translate_spaces_to_tabs": true,
+	"translate_spaces_to_tabs": false,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true,
 	"wide_caret": true,
 	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?_",
-	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "node_modules/*"]
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "node_modules/*", "tmp/*"]
 }
