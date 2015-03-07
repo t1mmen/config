@@ -21,8 +21,10 @@ alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 alias ll='ls -al'
 alias editgit='atom ~/.gitconfig'
 alias editbash='subl ~/.bash_profile'
+alias edithttpd='subl /Applications/MAMP/conf/apache/httpd.conf'
+alias editvhosts='subl /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf'
+alias edithosts='subl /etc/hosts'
 alias resource='source ~/.bash_profile && echo "Done!"'
-alias vi=vim
 
 ## Git commands
 alias log='git log'
@@ -50,26 +52,18 @@ alias up='svn up'
 alias sst='svn st'
 
 ## Switch repos
-DIR=/Users/timmstokke/Dropbox/www
+DIR=~/work
+alias db='cd /Users/timmstokke/Dropbox'
 alias h='cd ~/'
 alias w='cd ${DIR}'
 alias www='cd ${DIR}'
-alias bs='cd ${DIR}/bootstrap'
-
-## Core GitHub apps
-alias gh='cd ~/github'
-alias gg='cd ~/github/github'
-alias ggg='gg && script/server'
-alias giants='cd ~/github/giants'
-alias hire='cd ~/github/hire'
-alias summit='cd ~/github/summit'
-alias primer='cd ~/github/primer'
+alias gotdone-client='cd ${DIR}/gotdone-client'
+alias gotdone-server='cd ${DIR}/gotdone-server'
+alias gotdone-workers='cd ${DIR}/gotdone-workers'
 
 ## Server guick starts
-alias ss='script/server'
 alias js='jekyll serve --watch'
 alias ps='python -m SimpleHTTPServer 4000'
-alias gtest='testrb test/integration/bundle_test.rb'
 
 ## Mobile iOS testing
 alias ios='open /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app'
