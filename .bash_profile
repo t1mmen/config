@@ -72,6 +72,7 @@ alias stopvolinspirevagrant='cd ~/work/volinspire/vagrant && vagrant halt'
 alias startvolinspireweb='cd ~/work/volinspire/vagrant && vagrant ssh web'
 alias startvolinspireapi='cd ~/work/volinspire/vagrant && vagrant ssh api'
 alias startvolinspireauth='cd ~/work/volinspire/vagrant && vagrant ssh auth'
+alias startvolinspirewebdev='cd ~/work/volinspire/web && gulp dev'
 
 ## Server guick starts
 alias js='jekyll serve --watch'
