@@ -12,6 +12,9 @@ export PS1="\n\[$(tput bold)\]\[$(tput setaf 5)\]➜ \[$(tput setaf 6)\]\w\[$(tp
 
 export PATH=/opt/local/bin:/opt/local/sbin:${PATH}
 
+# Ruby: enable shims and autocompletion.
+eval "$(rbenv init -)"
+
 # Aliases
 
 ## Tools
@@ -64,7 +67,11 @@ alias gotdone-workers='cd ${DIR}/gotdone-workers'
 
 # Start working on...
 alias gotdone='subl ~/work/gotdone-client ~/work/gotdone-cloud-workers ~/work/gotdone-server ~/work/gotdone-homepage && cd ~/work/gotdone-client && grunt'
-
+alias startvolinspirevagrant='subl ~/work/volinspire/ && cd ~/work/volinspire/vagrant && vagrant up'
+alias stopvolinspirevagrant='cd ~/work/volinspire/vagrant && vagrant halt'
+alias startvolinspireweb='cd ~/work/volinspire/vagrant && vagrant ssh web'
+alias startvolinspireapi='cd ~/work/volinspire/vagrant && vagrant ssh api'
+alias startvolinspireauth='cd ~/work/volinspire/vagrant && vagrant ssh auth'
 
 ## Server guick starts
 alias js='jekyll serve --watch'
