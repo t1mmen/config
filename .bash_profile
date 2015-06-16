@@ -15,7 +15,8 @@ export PATH=/opt/local/bin:/opt/local/sbin:${PATH}
 # Aliases
 
 ## Tools
-alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl' 
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias ngrok='/Applications/ngrok'
 
 ## Shortcuts
 alias ll='ls -al'
@@ -60,6 +61,10 @@ alias www='cd ${DIR}'
 alias gotdone-client='cd ${DIR}/gotdone-client'
 alias gotdone-server='cd ${DIR}/gotdone-server'
 alias gotdone-workers='cd ${DIR}/gotdone-workers'
+
+# Start working on...
+alias gotdone='subl ~/work/gotdone-client ~/work/gotdone-cloud-workers ~/work/gotdone-server ~/work/gotdone-homepage && cd ~/work/gotdone-client && grunt'
+
 
 ## Server guick starts
 alias js='jekyll serve --watch'
