@@ -12,9 +12,6 @@ export PS1="\n\[$(tput bold)\]\[$(tput setaf 5)\]➜ \[$(tput setaf 6)\]\w\[$(tp
 
 export PATH=/opt/local/bin:/opt/local/sbin:${PATH}
 
-# Ruby: enable shims and autocompletion.
-eval "$(rbenv init -)"
-
 # Aliases
 
 ## Tools
@@ -65,14 +62,17 @@ alias gotdone-client='cd ${DIR}/gotdone-client'
 alias gotdone-server='cd ${DIR}/gotdone-server'
 alias gotdone-workers='cd ${DIR}/gotdone-workers'
 
-# Start working on...
-alias gotdone='subl ~/work/gotdone-client ~/work/gotdone-cloud-workers ~/work/gotdone-server ~/work/gotdone-homepage && cd ~/work/gotdone-client && grunt'
-alias startvolinspirevagrant='subl ~/work/volinspire/ && cd ~/work/volinspire/vagrant && vagrant up'
-alias stopvolinspirevagrant='cd ~/work/volinspire/vagrant && vagrant halt'
-alias startvolinspireweb='cd ~/work/volinspire/vagrant && vagrant ssh web'
-alias startvolinspireapi='cd ~/work/volinspire/vagrant && vagrant ssh api'
-alias startvolinspireauth='cd ~/work/volinspire/vagrant && vagrant ssh auth'
-alias startvolinspirewebdev='cd ~/work/volinspire/web && gulp dev && open -a "Google Chrome" http://dev.volinspire.com:8081'
+# Work on: GotDone
+alias gotdone='subl ${DIR}/gotdone-client ${DIR}/gotdone-cloud-workers ${DIR}/gotdone-server ${DIR}/gotdone-homepage && cd ${DIR}/gotdone-client && grunt'
+
+# Work on: Volinspire
+VOLDIR=${DIR}/volinspire
+alias startvolinspirevagrant='cd ${VOLDIR}/vagrant && vagrant up'
+alias stopvolinspirevagrant='cd ${VOLDIR}/vagrant && vagrant halt'
+alias startvolinspireweb='cd ${VOLDIR}/vagrant && vagrant ssh web -c "cd /srv/app/web && node server; exec bash"'
+alias startvolinspireapi='cd ${VOLDIR}/vagrant && vagrant ssh api -c "cd /srv/app/api && node index; exec bash"'
+alias startvolinspireauth='cd ${VOLDIR}/vagrant && vagrant ssh auth -c "cd /srv/app/auth && node index; exec bash"'
+alias startvolinspirewebdev='subl ${VOLDIR}/ && cd ${VOLDIR}/web && open -a "Google Chrome" http://dev.volinspire.com:8081 && gulp dev'
 
 ## Server guick starts
 alias js='jekyll serve --watch'
@@ -83,3 +83,7 @@ alias ios='open /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Ruby setup
+eval "$(rbenv init -)"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
