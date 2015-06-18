@@ -17,6 +17,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:${PATH}
 ## Tools
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias ngrok='/Applications/ngrok'
+alias startngrok='ngrok http 4000 -subdomain=gotdone'
 
 ## Shortcuts
 alias ll='ls -al'
