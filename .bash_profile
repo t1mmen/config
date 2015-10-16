@@ -85,6 +85,11 @@ alias ios='open /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+## Node Version Manager
+export NVM_DIR="/Users/timmstokke/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
 # Ruby setup
 eval "$(rbenv init -)"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
