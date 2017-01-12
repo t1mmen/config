@@ -15,17 +15,17 @@ export PATH=/opt/local/bin:/opt/local/sbin:${PATH}
 # Aliases
 
 ## Tools
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias ngrok='/Applications/ngrok'
-alias startngrok='ngrok http 4000 -subdomain=gotdone'
+alias startngrok='ngrok http 80 -subdomain=gotdone'
 
 ## Shortcuts
 alias ll='ls -al'
-alias editgit='atom ~/.gitconfig'
-alias editbash='subl ~/.bash_profile'
-alias edithttpd='subl /Applications/MAMP/conf/apache/httpd.conf'
-alias editvhosts='subl /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf'
-alias edithosts='subl /etc/hosts'
+alias editgit='code ~/.gitconfig'
+alias editbash='code ~/.bash_profile'
+alias editbashrc='code ~/.bashrc'
+alias edithttpd='code /Applications/MAMP/conf/apache/httpd.conf'
+alias editvhosts='code /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf'
+alias edithosts='code /etc/hosts'
 alias resource='source ~/.bash_profile && echo "Done!"'
 
 ## Git commands
@@ -46,34 +46,12 @@ alias branch_new="git for-each-ref --sort=-committerdate refs/heads/ --format='%
 alias master='git co master'
 alias ghp='git co gh-pages'
 
-## Build tools
-alias gd='grunt dist'
-
-## SVN
-alias up='svn up'
-alias sst='svn st'
-
 ## Switch repos
 DIR=~/work
 alias db='cd /Users/timmstokke/Dropbox'
 alias h='cd ~/'
 alias w='cd ${DIR}'
 alias www='cd ${DIR}'
-alias gotdone-client='cd ${DIR}/gotdone-client'
-alias gotdone-server='cd ${DIR}/gotdone-server'
-alias gotdone-workers='cd ${DIR}/gotdone-workers'
-
-# Work on: GotDone
-alias gotdone='subl ${DIR}/gotdone-client ${DIR}/gotdone-cloud-workers ${DIR}/gotdone-server ${DIR}/gotdone-homepage && cd ${DIR}/gotdone-client && grunt'
-
-# Work on: Volinspire
-VOLDIR=${DIR}/volinspire
-alias startvolinspirevagrant='cd ${VOLDIR}/vagrant && vagrant up'
-alias stopvolinspirevagrant='cd ${VOLDIR}/vagrant && vagrant halt'
-alias startvolinspireweb='cd ${VOLDIR}/vagrant && vagrant ssh web -c "cd /srv/app/web && node server; exec bash"'
-alias startvolinspireapi='cd ${VOLDIR}/vagrant && vagrant ssh api -c "cd /srv/app/api && node index; exec bash"'
-alias startvolinspireauth='cd ${VOLDIR}/vagrant && vagrant ssh auth -c "cd /srv/app/auth && node index; exec bash"'
-alias startvolinspirewebdev='subl ${VOLDIR}/ && cd ${VOLDIR}/web && open -a "Google Chrome" http://dev.volinspire.com:8081 && gulp dev'
 
 ## Server guick starts
 alias js='jekyll serve --watch'
@@ -82,13 +60,12 @@ alias ps='python -m SimpleHTTPServer 4000'
 ## Mobile iOS testing
 alias ios='open /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app'
 
-# Added by the Heroku Toolbelt
+## Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-## Node Version Manager
+## Node version manager
 export NVM_DIR="/Users/timmstokke/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 
 # Ruby setup
 eval "$(rbenv init -)"
