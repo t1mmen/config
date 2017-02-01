@@ -53,6 +53,14 @@ alias h='cd ~/'
 alias w='cd ${DIR}'
 alias www='cd ${DIR}'
 
+## Timely server starts
+alias timelyServerDir='cd ${DIR}/timely'
+alias timelyClientDir='cd ${DIR}/timely-frontend/react'
+alias serverUpdate='timelyServerDir; git pull; bundle exec rake db:migrate'
+alias serverStart='timelyServerDir; mysql.server start; concurrently "redis-server /usr/local/etc/redis.conf" "bundle exec rails s"'
+alias clientUpdate='timelyClientDir; git pull'
+alias clientStart='timelyClientDir; yarn; npm run start';
+
 ## Server guick starts
 alias js='jekyll serve --watch'
 alias ps='python -m SimpleHTTPServer 4000'
