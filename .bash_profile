@@ -53,7 +53,8 @@ alias h='cd ~/'
 alias w='cd ${DIR}'
 alias www='cd ${DIR}'
 
-## Timely server starts
+## Timely dev stuff
+## requires $ npm install concurrently -g 
 alias timelyServerDir='cd ${DIR}/timely'
 alias timelyClientDir='cd ${DIR}/timely-frontend/react'
 alias serverUpdate='timelyServerDir; git pull; bundle exec rake db:migrate'
